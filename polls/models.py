@@ -23,3 +23,22 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+class Lawyer(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    university = models.CharField(max_length=80)
+    title = models.CharField(max_length=50)
+    years_of_experience = models.IntegerField(default=0)
+    intro = models.CharField(max_length=300)
+    f1_visa_expertise = models.BooleanField(default=False)
+    f1_opt_expertise = models.BooleanField(default=False)
+    green_card_expertise = models.BooleanField(default=False)
+    h1B_expertise = models.BooleanField(default=False)
+    price_range = models.IntegerField(default=2)
+    rating = models.IntegerField(default=4)
+
+    
+   
+
+
