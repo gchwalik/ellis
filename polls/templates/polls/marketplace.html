@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <title>Hello, world!</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+<!--            <header class="class=navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">-->
+<!--                <div class="navbar-nav-scroll">-->
+<!--                    <ul class="navbar-nav bd-navbar-nav flex-row">-->
+<!--                        <li class="nav-item">Home</li>-->
+<!--                        <li class="nav-item">About</li>-->
+<!--                        <li class="nav-item">Lawyer</li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </header>-->
+            <header class="bg-dark"></header>
+
+        </div>
+    <!-- END OF COL-->
+    </div>
+    <!--    END OF ROW-->
+
+
+
+
+
+
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1 class="display-4">ELLIS</h1>
+                <p class="lead">blah blah blah let's help immigrants cause they're welcome here too!</p>
+                <hr class="my-4">
+    <!--            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+    <!--            <p class="lead">-->
+    <!--                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+    <!--            </p>-->
+             </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col">
+            <h2>Who are you looking for?</h2>
+            <p class="lead">Find the help you need. Use the menus below to find a lawyer that fits your needs.</p>
+            <div class="btn-group">
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Specialties
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">OPT</a>
+                        <a class="dropdown-item" href="#">F-1</a>
+                        <a class="dropdown-item" href="#">H-1B</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Language
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Chinese (中文)</a>
+                        <a class="dropdown-item" href="#">Spanish (Español)</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+<!--    card first row-->
+    <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col-md-8">
+            {% for lawyer in lawyers %}
+            <div class="card">
+                <div class="card-body">
+                    <img src="jane-doe.jpg" alt="" class="img-thumbnail rounded float-left m-1">
+                    <h4 class="card-title">{{lawyer.first_name}} {{lawyer.last_name}}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ lawyer.title }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ lawyer.years_of_experience }} years experience</h6>
+                    <p class="card-text">{{ lawyer.intro }}</p>
+                    <button type="button" class="btn btn-outline-warning float-right">Chat Now</button>
+<!--                    <br />-->
+<!--                    <a href="#" class="card-link">Card link</a>-->
+<!--                    <a href="#" class="card-link">Another link</a>-->
+                </div>
+            </div>
+            {% endfor %}
+
+            
+        </div>
+        <div class="col"></div>
+
+
+    </div>
+<!--    END OF ROW-->
+</div>
+<!--END OF CONTAINER-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="hack.js"></script>
+</body>
+</html>

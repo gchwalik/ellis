@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
-from .models import Choice, Question
+from .models import Choice, Question, Lawyer
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
@@ -34,3 +34,9 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+def lawyers(request):
+    lawyers = Lawyer.objects.all()
+
+    return render(request, 'polls/marketplace.html', {'lawyers': lawyers})
