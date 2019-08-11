@@ -38,7 +38,8 @@ class Lawyer(models.Model):
     price_range = models.IntegerField(default=2)
     rating = models.IntegerField(default=4)
 
-    
+    def __str__(self):
+        return self.first_name + " " + self.last_name
    
 
 
